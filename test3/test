@@ -1,0 +1,23 @@
+var input = require('fs').readFileSync('numeros', 'utf8');
+var lines = input.split('\n');
+
+var valor = lines.shift();
+var notas = [100, 50, 20, 10, 5, 2, 1]
+var moedas = [/* 1, */ .50, .25, 0.10, 0.05, 0.01]
+
+console.log('NOTAS:');
+for (let nota of notas){
+    if(nota !== 1){
+    console.log(`${parseInt(valor/nota)} nota(s) de R$ ${nota}.00`)
+    valor = valor%nota}
+    if(nota === 1){
+        console.log('MOEDAS:');
+        console.log(`${parseInt(valor/nota)} moeda(s) de R$${nota}.00`)
+  
+    }
+}
+
+for (let moeda of moedas){
+    console.log(`${parseInt(valor/moeda)} moeda(s) de R$${moeda.toFixed(2)}`)
+    valor = valor%moeda
+}

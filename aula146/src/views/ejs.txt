@@ -1,0 +1,11 @@
+<% Controle de Fluxo (if, for, tudo que for de JS)%>
+<%= Imprime escapando caracteres %> mosta
+<%- Imprime sem escapando caracteres %> executa
+<%# Comentario %>
+<%- include('CAMINHO/ARQUIVO')%>
+
+<% if(alguma coisa) { %>
+    <%= exibe alguma coisa %>
+<% } else { %>
+    <%= exibe alguma outra coisa %>
+<% } %>
